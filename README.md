@@ -12,4 +12,13 @@ You can test your client on
 You need to do a POST request to /upload, using form data, where 'image' is the actual file (image).
 
 Response example:
+```javascript
+{
+  "success": true,
+  "message": "Image successfully uploaded!",
+  "imagePath": "oQkBWU6Qav.jpg"
+}
+```
 
+
+Your image will be on http://boldijar.esy.es/images/oQkBWU6Qav.jpg .
