@@ -22,3 +22,7 @@ Response example:
 
 
 Your image will be on http://boldijar.esy.es/images/oQkBWU6Qav.jpg .
+
+You can use [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) to test this.
+
+![img1](http://i.imgur.com/hJbyhMT.png)
