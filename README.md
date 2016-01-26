@@ -4,3 +4,12 @@ Web API to upload images made in PHP, using Silex.
 
 Check [api.php](https://github.com/BoldijarPaul/upload-image-backend/blob/master/api.php) and [FileHelper.php](https://github.com/BoldijarPaul/upload-image-backend/blob/master/FileHelper.php) to see how you can do it.
 Also check the [android app client](https://github.com/BoldijarPaul/upload-image-android-client) that consumes this API. 
+
+
+You can test your client on 
+'http://boldijar.esy.es/api.php/
+
+You need to do a POST request to /upload, using form data, where 'image' is the actual file (image).
+
+Response example:
+
