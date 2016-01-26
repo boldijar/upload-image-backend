@@ -13,7 +13,7 @@ $app->post('/upload', function (Request $request) use ($app){
 		$obj=new stdClass();
 		$obj->success=false;
 		$obj->error="No image provided";
-	(	return json_encode($obj);
+	 	return json_encode($obj);
 	}
 	return json_encode(FileHelper::writeFile($file));
 });

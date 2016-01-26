@@ -1,23 +1,24 @@
 <?php
 
-require_once 'DatabaseController.php';
 
-class FileHelper extends DatabaseController {
 
-      // supported image extensions
-      $supported_image = array(
-          'gif',
-          'jpg',
-          'jpeg',
-          'png'
-      );
+class FileHelper  {
+
       public static function writeFile($file){
+
+            $supported_image=array(
+                'gif',
+                'jpg',
+                'jpeg',
+                'png'
+            );
             // get the file extension
             $extension=$file->getClientOriginalExtension();
+
             // make it lowercase
             $extension=strtolower($extension);
             // check if it is valid
-            if(!$in_array($extension,$supported_image)){
+            if(!in_array($extension,$supported_image )){
                   // if is not valid, return an error
                   $obj = new stdClass();
                   $obj->success = false;
@@ -25,6 +26,7 @@ class FileHelper extends DatabaseController {
                   return $obj;
             }
             // add extension to name
+            $name=FileHelper::generateRandomString(10);
             $name = $name.'.'.$extension;
             // create the file
             $file->move(__DIR__.'/images', $name);
@@ -33,7 +35,7 @@ class FileHelper extends DatabaseController {
             $obj->success=true;
             $obj->message="Image successfully uploaded!";
             $obj->imagePath=$name;
-            return obj;
+            return $obj;
       }
 
       public static function generateRandomString($length) {
